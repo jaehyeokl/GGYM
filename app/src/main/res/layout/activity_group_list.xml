@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#ECD7D6"
+        android:gravity="center"
+        android:text="그룹 보기"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/inputSearchGroup"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:hint="검색"
+        android:maxLength="20"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toStartOf="@+id/buttonGroupSearch"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/textView14"
+        app:layout_constraintTop_toBottomOf="@+id/buttonJoinedGroup" />
+
+    <ImageButton
+        android:id="@+id/buttonGroupSearch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/inputSearchGroup"
+        app:layout_constraintEnd_toStartOf="@+id/textView14"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/inputSearchGroup"
+        app:layout_constraintTop_toTopOf="@+id/inputSearchGroup"
+        app:srcCompat="@android:drawable/ic_menu_search" />
+
+    <View
+        android:id="@+id/groupSearchBar"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginRight="30dp"
+        android:background="#C5C5C5"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputSearchGroup"
+        tools:ignore="MissingConstraints" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycleGroupList"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/groupSearchBar" />
+
+    <Button
+        android:id="@+id/buttonJoinedGroup"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="가입 그룹"
+        app:layout_constraintEnd_toStartOf="@+id/buttonSearchGroup"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView14" />
+
+    <Button
+        android:id="@+id/buttonSearchGroup"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="그룹 탐색"
+        app:layout_constraintBottom_toBottomOf="@+id/buttonJoinedGroup"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/buttonJoinedGroup"
+        app:layout_constraintTop_toTopOf="@+id/buttonJoinedGroup" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycleJoinedGroupList"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonJoinedGroup" />
+
+    <ListView
+        android:id="@+id/listRelationKeyword"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:textFilterEnabled="true"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="@+id/inputSearchGroup"
+        app:layout_constraintStart_toStartOf="@+id/inputSearchGroup"
+        app:layout_constraintTop_toBottomOf="@+id/inputSearchGroup" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

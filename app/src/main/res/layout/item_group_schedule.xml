@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="90dp">
+
+    <TextView
+        android:id="@+id/groupScheduleTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginBottom="2dp"
+        android:text="18:00 - 19:00"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/groupScheduleName"
+        app:layout_constraintStart_toEndOf="@+id/groupScheduleDate"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+        android:id="@+id/groupScheduleName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:text="필라테스 기초"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/groupScheduleTime"
+        app:layout_constraintTop_toBottomOf="@+id/groupScheduleTime" />
+
+    <TextView
+        android:id="@+id/groupScheduleDayOfWeek"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="화요일"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/groupScheduleDate"
+        app:layout_constraintTop_toBottomOf="@+id/groupScheduleDate" />
+
+    <TextView
+        android:id="@+id/groupScheduleDate"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:text="8/25"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/groupScheduleDayOfWeek"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+        android:id="@+id/groupScheduleMax"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="30dp"
+        android:layout_marginRight="30dp"
+        android:text="5"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/groupScheduleTime" />
+
+    <TextView
+        android:id="@+id/textView50"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="5dp"
+        android:layout_marginRight="5dp"
+        android:text="/"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/groupScheduleMax"
+        app:layout_constraintEnd_toStartOf="@+id/groupScheduleMax"
+        app:layout_constraintTop_toTopOf="@+id/groupScheduleMax" />
+
+    <TextView
+        android:id="@+id/groupScheduleReserve"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="5dp"
+        android:layout_marginRight="5dp"
+        android:text="n"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/groupScheduleMax"
+        app:layout_constraintEnd_toStartOf="@+id/textView50"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintTop_toTopOf="@+id/groupScheduleMax" />
+
+    <TextView
+        android:id="@+id/groupScheduleLeftTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/groupScheduleName"
+        app:layout_constraintEnd_toEndOf="@+id/groupScheduleMax" />
+
+    <TextView
+        android:id="@+id/groupScheduleAlarmTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/groupScheduleDayOfWeek"
+        app:layout_constraintEnd_toEndOf="@+id/groupScheduleMax" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

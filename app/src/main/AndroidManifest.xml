@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="project.jaehyeok.ggym">
+
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".SearchAddressActivity"></activity>
+        <activity android:name=".CurrentCoronaActivity" />
+
+        <service
+            android:name=".AlarmSoundService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <receiver
+            android:name=".AlarmReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="set.schedule.alarm" />
+            </intent-filter>
+        </receiver>
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="project.jaehyeok.ggym.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <activity android:name=".AlarmScheduleActivity" />
+        <activity android:name=".GroupInformationActivity" />
+        <activity android:name=".ScheduleInformationActivity" />
+        <activity android:name=".AddScheduleActivity" />
+        <activity android:name=".GroupScheduleActivity" />
+        <activity
+            android:name=".ChangeGroupActivity"
+            android:theme="@android:style/Theme.DeviceDefault.Light.Dialog.NoActionBar"
+            android:windowSoftInputMode="adjustNothing" />
+        <activity android:name=".MyGroupInformationActivity" />
+        <activity
+            android:name=".GetReservationActivity"
+            android:theme="@android:style/Theme.DeviceDefault.Light.Dialog.NoActionBar" />
+        <activity android:name=".MyPageActivity" />
+        <activity android:name=".ReservationActivity" />
+        <activity android:name=".CompletedSingInActivity" />
+        <activity android:name=".TestActivity" />
+        <activity android:name=".GroupListActivity" />
+        <activity android:name=".MakeGroupActivity" />
+        <activity android:name=".MyGroupActivity" />
+        <activity android:name=".MyInformationActivity" />
+        <activity android:name=".ReserveActivity" />
+        <activity android:name=".ScheduleActivity" />
+        <activity android:name=".SignInActivity" />
+        <activity android:name=".LoginActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".MainActivity" />
+    </application>
+
+</manifest>

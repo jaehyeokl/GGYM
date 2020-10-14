@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/classGroupName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="땡떙필라테스"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/time"
+        app:layout_constraintStart_toStartOf="@+id/time" />
+
+    <TextView
+        android:id="@+id/time2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="40dp"
+        android:text="18:00"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/reservationCalendar" />
+
+    <TextView
+        android:id="@+id/className2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:text="필라테스 기초"
+        app:layout_constraintBottom_toBottomOf="@+id/classManager"
+        app:layout_constraintStart_toEndOf="@+id/classManager"
+        app:layout_constraintTop_toTopOf="@+id/classManager" />
+
+    <TextView
+        android:id="@+id/classManager2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="AJNA"
+        app:layout_constraintStart_toStartOf="@+id/time"
+        app:layout_constraintTop_toBottomOf="@+id/time" />
+
+    <TextView
+        android:id="@+id/classMaxNumber2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="2dp"
+        android:text="5"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/getReservation"
+        app:layout_constraintTop_toTopOf="@+id/classGroupName" />
+
+    <Button
+        android:id="@+id/getReservation2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="40dp"
+        android:text="예약"
+        app:layout_constraintBottom_toBottomOf="@+id/classManager"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="2dp"
+        android:text="/"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/classMaxNumber"
+        app:layout_constraintEnd_toStartOf="@+id/classMaxNumber"
+        app:layout_constraintTop_toTopOf="@+id/classMaxNumber" />
+
+    <TextView
+        android:id="@+id/classAttendNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="2dp"
+        android:text="2"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/classMaxNumber"
+        app:layout_constraintEnd_toStartOf="@+id/textView42"
+        app:layout_constraintTop_toTopOf="@+id/classMaxNumber" />
+
+    <TextView
+        android:id="@+id/textView42"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="5dp"
+        android:text="수강인원"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/classMaxNumber"
+        app:layout_constraintEnd_toStartOf="@+id/classAttendNumber"
+        app:layout_constraintTop_toTopOf="@+id/classMaxNumber" />
+
+    <TextView
+        android:id="@+id/textView44"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:text="-"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/time"
+        app:layout_constraintStart_toEndOf="@+id/time"
+        app:layout_constraintTop_toTopOf="@+id/time" />
+
+    <TextView
+        android:id="@+id/classEndTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:text="19:00"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/time"
+        app:layout_constraintStart_toEndOf="@+id/textView9"
+        app:layout_constraintTop_toTopOf="@+id/time" />
+</androidx.constraintlayout.widget.ConstraintLayout>

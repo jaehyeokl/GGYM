@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ECD7D6"
+    tools:context=".AlarmScheduleActivity">
+
+    <Button
+        android:id="@+id/buttonStopAlarm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="일정 확인"
+        app:layout_constraintBottom_toTopOf="@+id/buttonStopActivity"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/alarmCheckCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="n"
+        android:textSize="50sp"
+        app:layout_constraintBottom_toTopOf="@+id/buttonStopAlarm"
+        app:layout_constraintEnd_toStartOf="@+id/addTextView"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/buttonStopActivity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="50dp"
+        android:text="종료"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/addTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="  초 후 알람이 시작됩니다"
+        app:layout_constraintBottom_toTopOf="@+id/buttonStopAlarm"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/alarmCheckCount"
+        app:layout_constraintTop_toTopOf="@+id/alarmCheckCount"
+        app:layout_constraintVertical_bias="0.7" />
+
+    <ImageView
+        android:id="@+id/alarmImage"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginBottom="70dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/buttonStopAlarm"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@mipmap/alarmicon" />
+
+    <TextView
+        android:id="@+id/alarmClassTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginBottom="7dp"
+        android:text="time"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/alarmClassName"
+        app:layout_constraintStart_toEndOf="@+id/textView62"
+        app:layout_constraintTop_toBottomOf="@+id/alarmClassDate" />
+
+    <TextView
+        android:id="@+id/alarmClassManeger"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="7dp"
+        android:text="manager"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/alarmImage"
+        app:layout_constraintStart_toEndOf="@+id/textView64"
+        app:layout_constraintTop_toBottomOf="@+id/alarmClassName" />
+
+    <TextView
+        android:id="@+id/alarmClassDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="date"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/alarmClassTime"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView65"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+        android:id="@+id/alarmClassName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:text="name"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/alarmClassManeger"
+        app:layout_constraintStart_toEndOf="@+id/textView63"
+        app:layout_constraintTop_toBottomOf="@+id/alarmClassTime" />
+
+    <TextView
+        android:id="@+id/textView62"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="시간"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/alarmClassTime"
+        app:layout_constraintStart_toStartOf="@+id/alarmClassDate"
+        app:layout_constraintTop_toTopOf="@+id/alarmClassTime" />
+
+    <TextView
+        android:id="@+id/textView63"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="일정"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/alarmClassName"
+        app:layout_constraintStart_toStartOf="@+id/alarmClassDate"
+        app:layout_constraintTop_toTopOf="@+id/alarmClassName" />
+
+    <TextView
+        android:id="@+id/textView64"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="담당"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/alarmClassManeger"
+        app:layout_constraintStart_toStartOf="@+id/alarmClassDate"
+        app:layout_constraintTop_toTopOf="@+id/alarmClassManeger" />
+
+    <TextView
+        android:id="@+id/textView65"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="알람"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <View
+        android:id="@+id/view18"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginStart="70dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="70dp"
+        android:background="#C5C5C5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputGroupAddress"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textView67"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="주소"
+        app:layout_constraintBottom_toBottomOf="@+id/searchAddress"
+        app:layout_constraintStart_toStartOf="@+id/inputGroupAddress"
+        app:layout_constraintTop_toTopOf="@+id/searchAddress" />
+
+    <TextView
+        android:id="@+id/textView66"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="연락처"
+        app:layout_constraintBottom_toTopOf="@+id/inputGroupPhone"
+        app:layout_constraintStart_toStartOf="@+id/inputGroupPhone" />
+
+    <TextView
+        android:id="@+id/textView23"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:background="#ECD7D6"
+        android:gravity="center"
+        android:text="그룹 개설"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/inputGroupName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:ems="10"
+        android:hint="그룹 이름"
+        android:inputType="textPersonName"
+        android:maxLength="20"
+        android:maxLines="1"
+        app:layout_constraintBottom_toTopOf="@+id/inputGroupPhone"
+        app:layout_constraintDimensionRatio="6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView23"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+        android:id="@+id/inputGroupAddress"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:inputType="textMultiLine|textPostalAddress"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/inputGroupName"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/inputGroupName"
+        app:layout_constraintTop_toBottomOf="@+id/inputGroupPhone" />
+
+    <EditText
+        android:id="@+id/inputGroupPhone"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="20dp"
+        android:ems="10"
+        android:hint="연락처"
+        android:inputType="phone"
+        android:maxLength="10"
+        android:maxLines="1"
+        app:layout_constraintBottom_toTopOf="@+id/inputGroupAddress"
+        app:layout_constraintEnd_toEndOf="@+id/inputGroupName"
+        app:layout_constraintStart_toStartOf="@+id/inputGroupName"
+        app:layout_constraintTop_toBottomOf="@+id/inputGroupName" />
+
+    <Switch
+        android:id="@+id/switchOpen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:checked="false"
+        app:layout_constraintStart_toStartOf="@+id/inputGroupAddress"
+        app:layout_constraintTop_toBottomOf="@+id/view18"
+        tools:checked="false" />
+
+    <Button
+        android:id="@+id/toMyPage"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:background="#ECD7D6"
+        android:text="확인"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/inputGroupName"
+        app:layout_constraintStart_toStartOf="@+id/inputGroupName" />
+
+    <TextView
+        android:id="@+id/textSwichOpen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="비공개"
+        app:layout_constraintBottom_toBottomOf="@+id/switchOpen"
+        app:layout_constraintStart_toEndOf="@+id/switchOpen"
+        app:layout_constraintTop_toTopOf="@+id/switchOpen" />
+
+    <Button
+        android:id="@+id/searchAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="주소검색"
+        app:layout_constraintBottom_toTopOf="@+id/inputGroupAddress"
+        app:layout_constraintEnd_toEndOf="@+id/inputGroupAddress" />
+
+    <TextView
+        android:id="@+id/textView61"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="그룹명"
+        app:layout_constraintBottom_toTopOf="@+id/inputGroupName"
+        app:layout_constraintStart_toStartOf="@+id/inputGroupName" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="300dp"
+    android:layout_height="350dp"
+    tools:context=".ChangeGroupActivity">
+
+  <EditText
+      android:id="@+id/viewChangeName"
+      android:layout_width="220dp"
+      android:layout_height="wrap_content"
+      android:ems="10"
+      android:hint="그룹이름"
+      android:inputType="textPersonName"
+      android:text="이름"
+      android:textSize="18sp"
+      app:layout_constraintBottom_toTopOf="@+id/viewChangePhone"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintVertical_bias="0.18"
+      app:layout_constraintVertical_chainStyle="packed" />
+
+  <EditText
+      android:id="@+id/viewChangePhone"
+      android:layout_width="220dp"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="20dp"
+      android:ems="10"
+      android:hint="연락처"
+      android:inputType="phone"
+      android:text="연락처"
+      app:layout_constraintBottom_toTopOf="@+id/viewChangeAddress"
+      app:layout_constraintEnd_toEndOf="@+id/viewChangeName"
+      app:layout_constraintStart_toStartOf="@+id/viewChangeName"
+      app:layout_constraintTop_toBottomOf="@+id/viewChangeName" />
+
+  <EditText
+      android:id="@+id/viewChangeAddress"
+      android:layout_width="220dp"
+      android:layout_height="80dp"
+      android:layout_marginTop="20dp"
+      android:ems="10"
+      android:hint="주소"
+      android:inputType="textPersonName"
+      android:lines="2"
+      android:singleLine="false"
+      android:text="주소"
+      app:layout_constraintBottom_toTopOf="@+id/viewChangeOpen"
+      app:layout_constraintEnd_toEndOf="@+id/viewChangeName"
+      app:layout_constraintStart_toStartOf="@+id/viewChangeName"
+      app:layout_constraintTop_toBottomOf="@+id/viewChangePhone" />
+
+  <Switch
+      android:id="@+id/switchChangeOpen"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:switchMinWidth="60dp"
+      app:layout_constraintBottom_toBottomOf="@+id/viewChangeOpen"
+      app:layout_constraintEnd_toEndOf="@+id/viewChangeAddress"
+      app:layout_constraintTop_toTopOf="@+id/viewChangeOpen" />
+
+  <TextView
+      android:id="@+id/viewChangeOpen"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="20dp"
+      android:text="TextView"
+      android:textSize="18sp"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintStart_toStartOf="@+id/viewChangeAddress"
+      app:layout_constraintTop_toBottomOf="@+id/viewChangeAddress" />
+
+  <Button
+      android:id="@+id/buttonGetChange"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginBottom="10dp"
+      android:text="수정"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintStart_toStartOf="@+id/viewChangeOpen" />
+
+  <Button
+      android:id="@+id/buttonCancelChange"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="취소"
+      app:layout_constraintBottom_toBottomOf="@+id/buttonGetChange"
+      app:layout_constraintEnd_toEndOf="@+id/switchChangeOpen"
+      app:layout_constraintTop_toTopOf="@+id/buttonGetChange" />
+</androidx.constraintlayout.widget.ConstraintLayout>
